@@ -1,2 +1,2 @@
 # dont-penciler.github.io
-this is my website - for writing stuffs
+this is my website - for a cool timer.
