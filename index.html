@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<h1>My First JavaScript</h1>
+    <h1>Tập đếm cùng bạn gái</h1>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
+    <button type="button" onclick="coolFunction()">
 
-<p id="demo"></p>
+        Bạn gái bấm vào đây.</button>
+    <p id="firstDate"></p>
+
+    <button type="button" onclick="coolFunction2()">
+
+        Hoặc vào đây.</button>
+    <p id="secondDate"></p>
+
 
 </body>
-</html> 
+
+<script>
+    function coolFunction() {
+        const oneDay = 24 * 60 * 60 * 1000;
+        var today = Date.now();
+        var secondDate = new Date('5/31/2022');
+        var firstDate = new Date('12/29/2020');
+        var fromFirstDate = Math.round(Math.abs((firstDate - today) / oneDay));
+        var toSecondDate = Math.round(Math.abs((secondDate - today) / oneDay));
+        document.getElementById('firstDate').innerHTML = "Đã " + fromFirstDate + " ngày kể từ first date của bọn mình";
+    }
+
+    function coolFunction2() {
+        const oneDay = 24 * 60 * 60 * 1000;
+        var today = Date.now();
+        var secondDate = new Date('5/31/2022');
+        var firstDate = new Date('12/29/2020');
+        var fromFirstDate = Math.round(Math.abs((firstDate - today) / oneDay));
+        var toSecondDate = Math.round(Math.abs((secondDate - today) / oneDay));
+        document.getElementById('secondDate').innerHTML = "Và còn " + toSecondDate + " ngày cho đến second date :)";
+    }
+</script>
+
+</html>
